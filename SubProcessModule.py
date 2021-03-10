@@ -33,11 +33,11 @@ print(f"Command Reuslt in List is: {out.splitlines()}")
 
 ##### FOR WINDOWS ALWAYS USE SHELL=TRUE AND COMMAND AS STRING###
 
-''' note this block ofcodewon't work on windows######
+''' note this block of codewon't work on windows######
 cmds=input("provide list of commands you want to run: ")
 cmds.split() #convert your command to a list or pass the command as a list directly
 print(type(cmds))
-sp=subprocess.Popen(cmds,shell=False,stdout=subprocess.PIPE,stderr=subprocess.PIPE,universal_newlines=True) # shell=fale to run list of commands
+sp=subprocess.Popen(cmds,shell=False,stdout=subprocess.PIPE,stderr=subprocess.PIPE,universal_newlines=True) # shell=false to run list of commands
 rc = sp.wait()
 out, err = sp.communicate(
 print(f"the command fails code is {rc}")  # print error code
